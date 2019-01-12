@@ -21,7 +21,7 @@ class App extends Component {
     const timeSpan = Math.ceil((currentTime - this.state.startingDate) / 60 ); //seconds to minutes
 
     const weekNum = ('0' + timeSpan).slice(-2);
-    import(`./Data/week_${'04'}`)
+    import(`./Data/week_${'01'}`)
         .then(d=>this.setState({data:d.data}))
         .catch(err => alert("לא נמצא תוכן עבור שבוע זה"));
   }

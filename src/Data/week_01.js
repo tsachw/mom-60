@@ -9,14 +9,14 @@ export const data ={
     },
     "family_image": "4654guyguy.jpg",
     "surpriseType": "plant",
-    // "task": "",
+    "task": "",
     "plant": {
         "plant_image": "cyclamen.png",
         "plant_name": "שם הצמח"
     },
-    // "poem": {
-    //     "poem_title": "",
-    //     "written_by": "",
-    //     "poem_body": ``
-    // }
+    "poem": {
+        "poem_title": "",
+        "written_by": "",
+        "poem_body": ``
+    }
 }
