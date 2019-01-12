@@ -32,6 +32,10 @@ body {
   background-image: url('../src/Images/bg.png');
 }
 
+p {
+  line-height: 1.6em;
+}
+
 h1 {
   font-size: 96px;
   font-family: davidCursive;
@@ -53,7 +57,19 @@ h3 {
   font-size: 32px;
 }
 
+h4 {
+  font-family: narkisBold;
+  font-size: 24px;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.plant-name{
+  font-family: davidCursive;
+  font-size: 18px;
 }

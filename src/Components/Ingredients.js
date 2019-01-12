@@ -10,7 +10,7 @@ export default class Ingredients extends Component {
             <div>
                 <h2>לוֹטוֹ מצרכים</h2>
                 <br/>
-                {data && data.ingredients.map((ing, i)=>{
+                {data.ingredients.map((ing, i)=>{
                     return <div key={'ing_'+i}>{`${i+1}. ${ing}`}</div>
                 })}
             </div>

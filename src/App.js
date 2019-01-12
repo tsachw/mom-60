@@ -23,6 +23,8 @@ class App extends Component {
   render() {
     const {data} = this.state;
 
+    if(!data) return null;
+
     return (
       <div className="root_cont">
       <div style={{backgroundColor: global.colors.main, borderRadius: '100%', width: 40, height:40}}/>
@@ -30,8 +32,8 @@ class App extends Component {
         <h3>שישו ושימחו ביום ההולדת 60</h3>
         <p>אוכל והפתעות שבועיות</p>
         <Ingredients data={data}/>
-        <Recipe/>
-        <Surprise/>
+        <Recipe data={data.recipe}/>
+        <Surprise data={data}/>
       </div>
     );
   }
