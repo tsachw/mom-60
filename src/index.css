@@ -1,12 +1,43 @@
+@font-face {
+	font-family: davidCursive;
+	font-weight: 800;
+	src: url(Fonts/VC_david-Cursive.woff);
+}
+
+@font-face {
+	font-family: narkisBold;
+	font-weight: 800;
+	src: url(Fonts/VC_Narkis-Bold.woff);
+}
+
+@font-face {
+	font-family: narkisBlock;
+	font-weight: 800;
+	src: url(Fonts/VC_NarkisBlock-Regular.woff);
+}
+
 body {
   margin: 0;
   padding: 0;
   direction: rtl;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: narkisBlock,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../src/Images/bg.png');
+}
+
+h1 {
+  font-size: 120px;
+  font-family: davidCursive;
+  font-weight: 400;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+h3 {
+  font-family: narkisBold;
+  font-size: 32px;
 }
 
 code {
