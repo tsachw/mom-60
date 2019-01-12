@@ -1,4 +1,5 @@
 export const data ={
+    "date": "12/Jan/2019 00:00:00",
     "ingredients":["זעפרן","תותים","קוסקוס","פקאן"],
     "recipe": {
         "recipe_title": "כותרת למתכון שבוע 1",
