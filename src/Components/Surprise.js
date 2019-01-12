@@ -28,7 +28,7 @@ class Poem extends Component {
         return(
             <div>
             -שיר-
-            <h4>{`${data.title} / ${data.written_by}`}</h4>
+            <h4>{`${data.poem_title} / ${data.written_by}`}</h4>
 
             {data.poem_body.split('\n').map((l, i)=>{
                     return <p key={'l_'+i}>{l}</p>
@@ -55,12 +55,15 @@ class Task extends Component {
 class Plant extends Component {
     render(){
         const {data} = this.props;
+        if(!data.plant_image || data.plant_image === "") return null;
 
+        const img = require(`../Images/plants/${data.plant_image}`);
         return(
             <div>
                 -צמח השבוע-
-                <img src={data.image}/>
-                <div className="plant-name">{data.name}</div>
+                <br/>
+                <img alt="plant" src={img}/>
+                <div className="plant-name">{data.plant_name}</div>
             </div>
         )
     }

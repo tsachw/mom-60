@@ -13,9 +13,9 @@ export default class Recipe extends Component {
         return (
             <div>
                 <h2>מתכּוֹנִפְלא</h2>
-                <h4>{data.title}</h4>
+                <h4>{data.recipe_title}</h4>
                 <div style={ts}>מצרכים:</div>
-                {data.ingredients.map((ing,i)=>{return(
+                {data.recipe_ingredients.map((ing,i)=>{return(
                     <div key={"recipe_ing_"+i}>
                         {ing}
                     </div>
