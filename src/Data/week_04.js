@@ -1,5 +1,5 @@
 export const data ={
-    "ingredients":["","","",""],
+    "ingredients":["שמנת","ביצה","קמח","וניל"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
