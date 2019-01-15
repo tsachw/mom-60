@@ -73,3 +73,8 @@ code {
   font-family: davidCursive;
   font-size: 18px;
 }
+
+select {
+  font-family: narkisBlock;
+  font-size: 18px;
+}

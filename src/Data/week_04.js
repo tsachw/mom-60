@@ -1,4 +1,5 @@
 export const data ={
+    "key": "week_04",
     "ingredients":["שמנת","ביצה","קמח","וניל"],
     "recipe": {
         "recipe_title": "",

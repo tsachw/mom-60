@@ -3,7 +3,8 @@ import Ingredients from './Components/Ingredients';
 import Recipe from './Components/Recipe';
 import Surprise from './Components/Surprise';
 import FamilyPicture from './Components/FamilyPicture';
-import dates from './Data/dates.json'
+import WeekChooser from './Components/WeekChooser';
+import dates from './Data/dates.json';
 
 global.colors = {
   background: '#e6e9e1',
@@ -19,28 +20,29 @@ class App extends Component {
 
   componentDidMount(){
     // GenerateDates();
-    this.loadWeekData();
+    this.findWeeks(); 
   }
 
-  loadWeekData(){
-
+  findWeeks(){
     const now = new Date();
     let weeks = [];
     for(let i=0; i < dates.length; i++){
       if(Date.parse(dates[i].d) <= now) {
-        weeks.push(dates[i].w);
+        weeks.push(dates[i]);
       }
     }
 
-    // this.setState({availableWeeks: weeks});
+    this.setState({availableWeeks: weeks}, _=>this.loadWeekData(weeks[weeks.length-1].w))
+  }
 
-    import(`./Data/${weeks[weeks.length-1]}`)
-        .then(d=>this.setState({data:d.data, availableWeeks: weeks}))
+  loadWeekData(w) {
+    import(`./Data/${w}`)
+        .then(d=>this.setState({data:d.data}))
         .catch(err => alert("לא נמצא תוכן עבור שבוע זה"));
   }
   
   render() {
-    const {data} = this.state;
+    const {data, availableWeeks} = this.state;
 
     if(!data) return null;
 
@@ -50,6 +52,7 @@ class App extends Component {
         <h1 style={{backgroundColor: 'white'}}>שִׂישִׂימָּא</h1>
         <h3>שישו ושימחו ביום ההולדת 60</h3>
         <p>אוכל והפתעות שבועיות</p>
+        <WeekChooser list={availableWeeks} currentWeek={data.key} onSelect={(w)=>{this.loadWeekData(w)}}/>
         <Ingredients data={data}/>
         <Recipe data={data.recipe}/>
         <Surprise data={data}/>

@@ -1,4 +1,5 @@
 export const data ={
+    "key": "week_03",
     "ingredients":["חציל","אורז מלא","בשר הודו טחון","מיץ תפוזים"],
     "recipe": {
         "recipe_title": "כותרת למתכון שבוע 3",

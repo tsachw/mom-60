@@ -1,4 +1,5 @@
 export const data ={
+    "key": "week_02",
     "ingredients":["ארטישוק ירושלמי","קנלוני","גבינה כחולה","דבש"],
     "recipe": {
         "recipe_title": "כותרת למתכון שבוע 2",
