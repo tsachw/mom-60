@@ -9,6 +9,7 @@ export const data ={
         `
     },
     "family_image": "4654guyguy.jpg",
+    "family_image_title": "יום כיף בספארי",
     "surpriseType": "plant",
     "task": "",
     "plant": {
