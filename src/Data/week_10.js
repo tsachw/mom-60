@@ -1,11 +1,13 @@
 export const data ={
-    "ingredients":["חלווה","חציל","טונה","סלרי"],
+    "key": "week_10",
+    "ingredients":["","","",""],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
     "family_image": "",
+    "family_image_title": "",
     "surpriseType": "",
     "task": "",
     "plant": {

@@ -9,6 +9,7 @@ export const data ={
         `
     },
     "family_image":"dnbdtrtre65eu.jpeg",
+    "family_image_title": "בסביח של עובד",
     "surpriseType": "task",
     "task": "עליך לספור עד 2000 בקול רם",
     "plant": {

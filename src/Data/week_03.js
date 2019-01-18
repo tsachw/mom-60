@@ -9,6 +9,7 @@ export const data ={
         `
     },
     "family_image": "4654guyguy.jpg",
+    "family_image_title": "קארטינג בקריית גת",
     "surpriseType": "poem",
     "task": "",
     "plant": {

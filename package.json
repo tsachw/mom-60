@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "gsap": "^2.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"

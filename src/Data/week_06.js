@@ -7,6 +7,7 @@ export const data ={
         "instructions": ``
     },
     "family_image": "",
+    "family_image_title": "",
     "surpriseType": "",
     "task": "",
     "plant": {

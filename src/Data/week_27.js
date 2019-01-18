@@ -1,4 +1,5 @@
 export const data ={
+    "key": "week_27",
     "ingredients":["","","",""],
     "recipe": {
         "recipe_title": "",
@@ -6,6 +7,7 @@ export const data ={
         "instructions": ``
     },
     "family_image": "",
+    "family_image_title": "",
     "surpriseType": "",
     "task": "",
     "plant": {

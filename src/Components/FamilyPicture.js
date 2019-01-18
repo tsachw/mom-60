@@ -10,7 +10,10 @@ export default class FamilyPicture extends Component {
             <div>
                 <h2>מהאלבום</h2>
                 <br/>
-                <img src={img} alt="family"/>
+                <img src={img} alt="family" style={{
+                    maxWidth: "100%"
+                }}/>
+                {data.family_image_title}
             </div>
         )
     }

@@ -15,6 +15,10 @@
 	font-weight: 800;
 	src: url(Fonts/VC_NarkisBlock-Regular.woff);
 }
+html {
+  height  : 100%;
+  overflow: hidden;
+}
 
 :root {
   --main-color: #f70d3f;
@@ -22,6 +26,8 @@
 }
 
 body {
+  height  : 100%;
+  overflow: hidden;
   margin: 0;
   padding: 16px;
   direction: rtl;
@@ -34,6 +40,8 @@ body {
 
 p {
   line-height: 1.6em;
+  min-height: 0.8em;
+  /* margin-bottom: 1.6em; */
 }
 
 h1 {

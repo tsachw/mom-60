@@ -5,6 +5,7 @@ import Surprise from './Components/Surprise';
 import FamilyPicture from './Components/FamilyPicture';
 import WeekChooser from './Components/WeekChooser';
 import dates from './Data/dates.json';
+import Page from './Components/Page';
 
 global.colors = {
   background: '#e6e9e1',
@@ -13,14 +14,41 @@ global.colors = {
 
 class App extends Component {
 
-  state = {
-    availableWeeks: [],
-    data: null,
+  
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      availableWeeks: [],
+      data: null,
+      height: window.innerHeight,
+      width: window.innerWidth,
+      pageOrder: [0,1,2,3,4],
+    }
+
+    this.updateDimensions = this.updateDimensions.bind(this);
+
+    this.bounds = React.createRef();
+    global.turnPage = ()=>{
+      let order = this.state.pageOrder;
+      order.unshift(order.pop());
+      console.log(order);
+      this.setState({pageOrder:order});
+    }
   }
 
   componentDidMount(){
     // GenerateDates();
     this.findWeeks(); 
+
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions() {
+    this.setState({
+      height: window.innerHeight, 
+      width: window.innerWidth
+    });
   }
 
   findWeeks(){
@@ -42,21 +70,32 @@ class App extends Component {
   }
   
   render() {
-    const {data, availableWeeks} = this.state;
+    const {data, availableWeeks, width, height, pageOrder} = this.state;
 
     if(!data) return null;
 
     return (
-      <div className="root_cont">
-      <div style={{backgroundColor: global.colors.main, borderRadius: '100%', width: 40, height:40}}/>
-        <h1 style={{backgroundColor: 'white'}}>שִׂישִׂימָּא</h1>
-        <h3>שישו ושימחו ביום ההולדת 60</h3>
-        <p>אוכל והפתעות שבועיות</p>
-        <WeekChooser list={availableWeeks} currentWeek={data.key} onSelect={(w)=>{this.loadWeekData(w)}}/>
-        <Ingredients data={data}/>
-        <Recipe data={data.recipe}/>
-        <Surprise data={data}/>
-        <FamilyPicture data={data}/>
+      <div className="root_cont" ref={this.bounds}>
+        <Page index={pageOrder[0]} w={width} h={height} title={"בדיקה"} bounds={this.bounds}>
+          <div style={{backgroundColor: global.colors.main, borderRadius: '100%', width: 40, height:40}}/>
+          <h1 style={{backgroundColor: 'white'}}>שִׂישִׂימָּא</h1>
+          <h3>שישו ושימחו ביום ההולדת 60</h3>
+          <p>אוכל והפתעות שבועיות</p>
+          <WeekChooser list={availableWeeks} currentWeek={data.key} onSelect={(w)=>{this.loadWeekData(w)}}/>
+        </Page>
+        <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
+          <Ingredients data={data}/>
+        </Page>
+        <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
+          <Recipe data={data.recipe}/>  
+        </Page>
+        <Page index={pageOrder[3]} w={width} h={height} title={"הפתעה"} bounds={this.bounds}>
+          <Surprise data={data}/>
+        </Page>
+        <Page index={pageOrder[4]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
+          <FamilyPicture data={data}/>
+        </Page>
+
       </div>
     );
   }
@@ -70,7 +109,7 @@ function GenerateDates(){
     
     for(let i=0; i<60; i++){
       const pre = ('0' + (i+1)).slice(-2);
-      let d = new Date("12 Jan 2019");
+      let d = new Date("15 Jan 2019");
       d.setDate(d.getDate() + i*1);
       dates += `{"d":"${d}","w":"week_${pre}"},\n`
     }
