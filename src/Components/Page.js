@@ -38,7 +38,7 @@ export default class Page extends Component {
                 borderRadius: '16px 4px 4px 16px',
                 boxShadow: "-10px 0 20px rgba(50,0,10,0.2)",
                 transform: `rotate(${ -1 + 2*Math.random()}deg)`,
-                pointerEvents: index === 0 ? '' : 'none',
+                // pointerEvents: index === 0 ? '' : 'none',
                 transition: 'transform 0.4s ease-out',
             }}>
                 {/* <h2>{title}</h2> */}

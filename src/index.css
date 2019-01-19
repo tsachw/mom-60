@@ -38,6 +38,10 @@ body {
   background-image: url('../src/Images/bg.png');
 }
 
+div{
+  -webkit-overflow-scrolling: touch;
+}
+
 p {
   line-height: 1.6em;
   min-height: 0.8em;

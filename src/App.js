@@ -79,12 +79,12 @@ class App extends Component {
 
     return (
       <div className="root_cont" ref={this.bounds}>
-        <Page index={pageOrder[0]} w={width} h={height} title={""} bounds={this.bounds}>
+        {/* <Page index={pageOrder[0]} w={width} h={height} title={""} bounds={this.bounds}>
           <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
         </Page>
         <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
           <Ingredients data={data}/>
-        </Page>
+        </Page> */}
         <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
           <Recipe data={data.recipe}/>  
         </Page>
