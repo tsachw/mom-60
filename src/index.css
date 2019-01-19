@@ -45,7 +45,7 @@ p {
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 20vw;
   font-family: davidCursive;
   font-weight: 400;
   margin-block-start: 0.2em;
@@ -62,7 +62,7 @@ h2 {
 
 h3 {
   font-family: narkisBold;
-  font-size: 32px;
+  font-size: 5vw;
 }
 
 h4 {
@@ -82,7 +82,21 @@ code {
   font-size: 18px;
 }
 
+
+
 select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
   font-family: narkisBlock;
-  font-size: 18px;
+  font-size: 3vw;
+  height: 10vw;
+  border-width: 4px 0 4px 0;
+  border-radius: 0;
+  border-color: var(--main-color);
+  padding-bottom: 1.5vw;
+}
+
+select:focus {
+  outline: none;
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import Cover from './Components/Cover';
 import Ingredients from './Components/Ingredients';
 import Recipe from './Components/Recipe';
 import Surprise from './Components/Surprise';
 import FamilyPicture from './Components/FamilyPicture';
-import WeekChooser from './Components/WeekChooser';
 import dates from './Data/dates.json';
 import Page from './Components/Page';
 
@@ -32,7 +32,6 @@ class App extends Component {
     global.turnPage = ()=>{
       let order = this.state.pageOrder;
       order.unshift(order.pop());
-      console.log(order);
       this.setState({pageOrder:order});
     }
   }
@@ -76,12 +75,8 @@ class App extends Component {
 
     return (
       <div className="root_cont" ref={this.bounds}>
-        <Page index={pageOrder[0]} w={width} h={height} title={"בדיקה"} bounds={this.bounds}>
-          <div style={{backgroundColor: global.colors.main, borderRadius: '100%', width: 40, height:40}}/>
-          <h1 style={{backgroundColor: 'white'}}>שִׂישִׂימָּא</h1>
-          <h3>שישו ושימחו ביום ההולדת 60</h3>
-          <p>אוכל והפתעות שבועיות</p>
-          <WeekChooser list={availableWeeks} currentWeek={data.key} onSelect={(w)=>{this.loadWeekData(w)}}/>
+        <Page index={pageOrder[0]} w={width} h={height} title={""} bounds={this.bounds}>
+          <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
         </Page>
         <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
           <Ingredients data={data}/>

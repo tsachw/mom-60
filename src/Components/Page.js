@@ -27,11 +27,11 @@ export default class Page extends Component {
         return (
             <div ref={this.page} id="page_container" style={{
                 position: 'absolute',
-                bottom: 16 + 6*index,
-                right: 16 + 16*index,
+                bottom: 16,
+                right: 16 + 8*index,
                 zIndex: 10-index,
-                width: w - 96,
-                height: h - 32 - 22,
+                width: w - 72,
+                height: h - 32,
                 backgroundColor: 'white',
                 overflowX: 'hidden',
                 overflowY: 'auto',
@@ -40,7 +40,7 @@ export default class Page extends Component {
                 transform: `rotate(${ -1 + 2*Math.random()}deg)`,
                 pointerEvents: index === 0 ? '' : 'none',
             }}>
-                <h2>{title}</h2>
+                {/* <h2>{title}</h2> */}
                 {this.props.children}
             </div>
         )
