@@ -8,7 +8,7 @@ import dates from './Data/dates.json';
 import Page from './Components/Page';
 
 global.colors = {
-  background: '#e6e9e1',
+  background: '#fbfaf7',
   main: '#f70d3f',
 }
 
@@ -81,18 +81,18 @@ class App extends Component {
       <div className="root_cont" ref={this.bounds}>
         {/* <Page index={pageOrder[0]} w={width} h={height} title={""} bounds={this.bounds}>
           <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
-        </Page>
-        <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
+        </Page> */}
+        {/* <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
           <Ingredients data={data}/>
         </Page> */}
-        <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
+        {/* <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
           <Recipe data={data.recipe}/>  
-        </Page>
-        <Page index={pageOrder[3]} w={width} h={height} title={"הפתעה"} bounds={this.bounds}>
-          <Surprise data={data}/>
-        </Page>
-        <Page index={pageOrder[4]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
+        </Page> */}
+        <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
           <FamilyPicture data={data}/>
+        </Page>
+        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"} bounds={this.bounds}>
+          <Surprise data={data}/>
         </Page>
 
       </div>

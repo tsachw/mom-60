@@ -29,13 +29,13 @@ export default class Recipe extends Component {
                 {/* <h2>מתכּוֹנִפְלא</h2> */}
                 <h4 style={{
                     textAlign: 'center',
-                    marginTop: global.isLandscape ? '1vh' : '6vw',
-                    marginBottom: global.isLandscape ? '6vh' : '6vw',
-                    padding: '1vh 3vw 2vh 3vW',
-                    borderWidth: `0 4px 0 4px`,
-                    borderColor: global.colors.main,
-                    borderStyle: 'double'
-                }}>{data.recipe_title}</h4>
+                    marginTop: global.isLandscape ? '1vh' : '2vw',
+                    marginBottom: global.isLandscape ? '2vh' : '2vw',
+                    // padding: '1vh 3vw 2vh 3vW',
+                    // borderWidth: `0 4px 0 4px`,
+                    // borderColor: global.colors.main,
+                    // borderStyle: 'double'
+                }}>≈<br/>{data.recipe_title}<br/>≈</h4>
                 <div style={ts}>מצרכים:</div>
                 {data.recipe_ingredients.map((ing,i)=>{
                     return <Ingredient key={'ing_ ' + i} txt={ing}/>
