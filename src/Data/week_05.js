@@ -22,8 +22,8 @@ export const data ={
     },
     "family_image": "1219683.jpg",
     "family_image_title": "מקדונלדס בצומת שוקת",
-    "surpriseType": "",
-    "task": "",
+    "surpriseType": "task",
+    "task": "ביום שבת כאשר את נמצאת בקרבת אבא- כל שעה נשיקה, כל שעתיים חיבוק.",
     "plant": {
         "plant_image": "",
         "plant_name": ""

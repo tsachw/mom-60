@@ -12,12 +12,14 @@ export default class Surprise extends Component {
             default: comp = null;
         }
 
-        return (
-            <div>
-                <h2>הפתעה</h2>
-                {comp}
-            </div>
-        )
+        return comp;
+
+        // return (
+        //     <div>
+        //         <h2>הפתעה</h2>
+        //         {comp}
+        //     </div>
+        // )
     }
 }
 
@@ -42,11 +44,34 @@ class Task extends Component {
     render(){
         const {data} = this.props;
 
+        const vx = global.isLandscape ? 'vh' : 'vw';
+
         return(
-            <div>
-                -משימה-
-                <h4>חובה עליך:</h4>
-                {data}
+            <div style={{
+                position: 'absolute',
+                padding: `8${vx}`,
+                width: `calc( 100% - 16${vx} )`,
+                height: `calc( 100% - 16${vx} )`,               
+            }}>
+                <div style={{
+                    textAlign: 'center',                  
+                }}>- משימה -</div>
+                <div style={{
+                    height: '95%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                }}>
+                    <h4 style={{
+                        fontSize: `8${vx}`,
+                        // marginTop: '30%',
+                        marginBottom: '4vw',
+                        color: global.colors.main,
+                    }}>חובה עליך:</h4>
+                    <div style={{
+                        fontSize: `8${vx}`,
+                    }}>{data}</div>
+                </div>
             </div>
         )
     }

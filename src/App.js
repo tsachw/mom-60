@@ -88,9 +88,9 @@ class App extends Component {
         {/* <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
           <Recipe data={data.recipe}/>  
         </Page> */}
-        <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
+        {/* <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
           <FamilyPicture data={data}/>
-        </Page>
+        </Page> */}
         <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"} bounds={this.bounds}>
           <Surprise data={data}/>
         </Page>
