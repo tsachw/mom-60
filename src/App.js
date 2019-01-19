@@ -30,7 +30,6 @@ class App extends Component {
 
     this.updateDimensions = this.updateDimensions.bind(this);
 
-    this.bounds = React.createRef();
     global.turnPage = ()=>{
       let order = this.state.pageOrder;
       order.unshift(order.pop());
@@ -78,20 +77,20 @@ class App extends Component {
     if(!data) return null;
 
     return (
-      <div className="root_cont" ref={this.bounds}>
-        {/* <Page index={pageOrder[0]} w={width} h={height} title={""} bounds={this.bounds}>
+      <div className="root_cont">
+        <Page index={pageOrder[0]} w={width} h={height} title={""}>
           <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
-        </Page> */}
-        {/* <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"} bounds={this.bounds}>
+        </Page>
+        <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"}>
           <Ingredients data={data}/>
-        </Page> */}
-        {/* <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"} bounds={this.bounds}>
+        </Page>
+        <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"}>
           <Recipe data={data.recipe}/>  
-        </Page> */}
-        {/* <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"} bounds={this.bounds}>
+        </Page>
+        <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"}>
           <FamilyPicture data={data}/>
-        </Page> */}
-        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"} bounds={this.bounds}>
+        </Page>
+        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"}>
           <Surprise data={data}/>
         </Page>
 

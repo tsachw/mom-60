@@ -23,6 +23,7 @@ html {
 :root {
   --main-color: #f70d3f;
   --background-color: #e6e9e1;
+  overflow: hidden;
 }
 
 body {
