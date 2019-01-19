@@ -20,18 +20,25 @@ export default class Cover extends Component {
                     paddingRight: '6vw',
                     paddingLeft: '6vw',
                     height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                 }}>
-                <h1 style={{
-                    marginTop: "8vh",
-                    // marginBottom: "6vh",
-                    }}>שִׂישִׂימָּא</h1>
-                    <div style={{
-                        position: 'absolute',
-                        width: "calc(100% - 12vw)",
-                        bottom: '10vh',
+                    <h1 style={{
+                        marginTop: "8vh",
+                        zIndex: 10,
+                        // marginBottom: "6vh",
+                    }}>שִׁישִּׁימָּא</h1>
+                    <img src={require('../Images/hearts.svg')} style={{                      
+                        width: "100%",
+                    }}/>
+                    <div style={{                       
+                        width: "100%",
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'flex-end',
+                        marginTop: '4vh',
+                        marginBottom: '8vh',
                     }}>
                     <div style={{
                         fontSize: '3vw',
