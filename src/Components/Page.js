@@ -34,7 +34,7 @@ export default class Page extends Component {
                 height: h - 32,
                 backgroundColor: 'white',
                 overflowX: 'hidden',
-                overflowY: 'auto',
+                overflowY: 'hidden',
                 borderRadius: '16px 4px 4px 16px',
                 boxShadow: "-10px 0 20px rgba(50,0,10,0.2)",
                 transform: `rotate(${ -1 + 2*Math.random()}deg)`,

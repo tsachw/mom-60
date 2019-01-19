@@ -5,21 +5,21 @@ export default class Ingredients extends Component {
     
     render(){
         const{data} = this.props;
-
+        console.log("global.isLandscape: " + global.isLandscape);
         const ingStyle = {
-            fontSize: '6vw',
+            fontSize: global.isLandscape ? '6vh' : '6vw',
             color: 'white',
             borderBottom: `6px solid rgba(0,0,0,0.4)`,
-            height: '12vw',
-            marginBottom: '6vw', 
+            height:  global.isLandscape ? '12vh' : '12vw',
+            marginBottom: global.isLandscape ? '6vh' : '6vw', 
         }
         return (
             <div style={{
                 width: "calc( 100% - 12vw )",
-                height: "calc( 100% - 24vw )",
+                height: "calc( 100% - 24vh )",
                 // backgroundColor: 'red',
                 backgroundImage: `url(${require('../Images/red-bg.png')})`,
-                padding: '12vw 12vw 12vw 0',
+                padding: '12vh 12vw 12vh 0',
             }}>
                 {/* <h2>לוֹטוֹ מצרכים</h2> */}
                 <br/>
