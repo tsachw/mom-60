@@ -10,15 +10,15 @@ export default class Page extends Component {
     }
 
     componentDidMount(){
-        Draggable.create(this.page.current, {
-            type: 'x,y',
-            bounds: this.props.bounds.current,
-            edgeResistance:0.98,
-            onDragEnd:()=>{
-                TweenMax.to(this.page.current, 1, {ease: Elastic.easeOut, transform: 'translate(0,0)'});
-                global.turnPage();
-            },
-        });
+        // Draggable.create(this.page.current, {
+        //     type: 'x,y',
+        //     bounds: this.props.bounds.current,
+        //     edgeResistance:0.98,
+        //     onDragEnd:()=>{
+        //         TweenMax.to(this.page.current, 1, {ease: Elastic.easeOut, transform: 'translate(0,0)'});
+        //         global.turnPage();
+        //     },
+        // });
     }
     
     render(){
@@ -39,6 +39,7 @@ export default class Page extends Component {
                 boxShadow: "-10px 0 20px rgba(50,0,10,0.2)",
                 transform: `rotate(${ -1 + 2*Math.random()}deg)`,
                 pointerEvents: index === 0 ? '' : 'none',
+                transition: 'transform 0.4s ease-out',
             }}>
                 {/* <h2>{title}</h2> */}
                 {this.props.children}

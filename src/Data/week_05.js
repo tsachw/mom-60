@@ -1,6 +1,6 @@
 export const data ={
     "key": "week_05",
-    "ingredients":["","","",""],
+    "ingredients":["פטריות שמפיניון","שיבולת שועל","גבינה בולגרית","רכז רימונים"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
