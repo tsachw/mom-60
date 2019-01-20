@@ -59,7 +59,6 @@ export default class Page extends Component {
                 boxShadow: "-10px 0 20px rgba(50,0,10,0.2)",
                 transform: `
                     rotate(${ -1 + 2*Math.random()}deg)
-                    // translate(${ -40 -60*(index)}px , 0)
                 `,
                 // transform: `rotate(${ -20 +10*index}deg)`,
                 // transformOrigin: '100% 0%',
