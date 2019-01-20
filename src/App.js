@@ -26,9 +26,11 @@ class App extends Component {
       height: window.innerHeight,
       width: window.innerWidth,
       pageOrder: [0,1,2,3,4],
+      spread: false,
     }
 
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.pageSelected = this.pageSelected.bind(this);
 
     global.turnPage = ()=>{
       let order = this.state.pageOrder;
@@ -70,30 +72,42 @@ class App extends Component {
         .then(d=>this.setState({data:d.data}))
         .catch(err => alert("לא נמצא תוכן עבור שבוע זה"));
   }
+
+  pageSelected(i){
+    console.log("selected: " + i);
+    this.setState({spread: false});
+  }
   
   render() {
-    const {data, availableWeeks, width, height, pageOrder} = this.state;
+    const {data, availableWeeks, width, height, pageOrder, spread} = this.state;
 
     if(!data) return null;
 
     return (
       <div className="root_cont">
-        <Page index={pageOrder[0]} w={width} h={height} title={""}>
+        <Page index={pageOrder[0]} w={width} h={height} title={"∷"} spread={spread} pageSelected={this.pageSelected}>
           <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
         </Page>
-        <Page index={pageOrder[1]} w={width} h={height} title={"מצרכים"}>
+        <Page index={pageOrder[1]} w={width} h={height} title={"לוֹטוֹ מצרכים"} spread={spread} pageSelected={this.pageSelected}>
           <Ingredients data={data}/>
         </Page>
-        <Page index={pageOrder[2]} w={width} h={height} title={"מתכונים"}>
+        <Page index={pageOrder[2]} w={width} h={height} title={"מתכּוֹנִפְלא"} spread={spread} pageSelected={this.pageSelected}>
           <Recipe data={data.recipe}/>  
         </Page>
-        <Page index={pageOrder[3]} w={width} h={height} title={"תמונה"}>
+        <Page index={pageOrder[3]} w={width} h={height} title={"מהאלבום"} spread={spread} pageSelected={this.pageSelected}>
           <FamilyPicture data={data}/>
         </Page>
-        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"}>
+        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"} spread={spread} pageSelected={this.pageSelected}>
           <Surprise data={data}/>
         </Page>
-
+        <div style={{
+          position: 'absolute',
+          bottom: 16,
+          left: 16,
+          width: 32,
+          height: 32,
+          backgroundColor: 'red',
+        }} onClick={_=>this.setState({spread: !spread})}/>
       </div>
     );
   }

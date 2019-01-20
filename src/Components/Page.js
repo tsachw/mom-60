@@ -22,7 +22,7 @@ export default class Page extends Component {
     }
     
     render(){
-        const {index, w,h, title} = this.props;
+        const {index, w,h, title, spread, pageSelected} = this.props;
 
         const pHeight = global.isLandscape ? h - 32 : h - 96; 
         const pWidth = global.isLandscape ? w - 128 : w - 72;
@@ -41,7 +41,13 @@ export default class Page extends Component {
         //     alignItems: 'center'
         // }
 
-
+        let transformState = `rotate(${ -1 + 2*Math.random()}deg)`;
+        let origin = "50% 50%";
+        if(spread){
+            transformState = `rotate(${ -5*(4-index)}deg)
+            translate(${20*(4-index)}px,0)`;
+            // origin = "0% 0%";
+        }
 
         return (
             <div ref={this.page} id="page_container" style={{
@@ -57,15 +63,29 @@ export default class Page extends Component {
                 overflowY: 'hidden',
                 borderRadius: '16px 4px 4px 16px',
                 boxShadow: "-10px 0 20px rgba(50,0,10,0.2)",
-                transform: `
-                    rotate(${ -1 + 2*Math.random()}deg)
-                `,
-                // transform: `rotate(${ -20 +10*index}deg)`,
-                // transformOrigin: '100% 0%',
-                transition: 'transform 0.4s ease-out',
+                transform: transformState,
+                transformOrigin: origin,
+                transition: 'transform 0.3s ease-out',
             }}>
                 {/* {index !== 0 && <div style={ticketStyle}>{title}</div> } */}
                 {this.props.children}
+                <div style={{
+                    position: 'absolute',
+                    padding: '8px 14px 10px 14px',
+                    borderRadius: '8px 0 0 0',
+                    bottom: 0,
+                    left: 0,
+                    backgroundColor: global.colors.main,
+                    opacity: spread ? 1 : 0,
+                    transformOrigin: "0% 100%",
+                    transform: 'rotate(90deg) translate(-100%, 0%)',
+                    userSelect: 'none',
+                    cursor: 'pointer',
+                    pointerEvents: spread ? '' : 'none',
+                    transition: 'opacity 0.3s ease-out',
+                }} onClick={_=>pageSelected(index)}>
+                    {title}
+                </div>
             </div>
         )
     }
