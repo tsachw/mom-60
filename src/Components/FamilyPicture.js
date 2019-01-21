@@ -20,8 +20,10 @@ export default class FamilyPicture extends Component {
                 {/* <br/> */}
                 
                 <img src={img} alt="family" style={{
-                    maxWidth: "100%",
-                    maxHeight: "100%",
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    width: 'auto',
+                    height: 'auto',
                     marginBottom: global.isLandscape ? '' : '20vh',
                     marginRight: global.isLandscape ? '20vw' : '',
                 }}/>

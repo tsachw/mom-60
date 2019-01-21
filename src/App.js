@@ -74,8 +74,12 @@ class App extends Component {
   }
 
   pageSelected(i){
-    console.log("selected: " + i);
-    this.setState({spread: false});
+    let order = [];
+    for(let p=0; p<5; p++){
+      order.push((5-i+p)%5);
+    }
+
+    this.setState({pageOrder: order, spread: false});
   }
   
   render() {
@@ -85,29 +89,34 @@ class App extends Component {
 
     return (
       <div className="root_cont">
-        <Page index={pageOrder[0]} w={width} h={height} title={"∷"} spread={spread} pageSelected={this.pageSelected}>
+        <Page index={0} displayOrder={pageOrder[0]} w={width} h={height} title={"❥"} spread={spread} pageSelected={this.pageSelected}>
           <Cover data={data} availableWeeks={availableWeeks} onSelectDate={(w)=>{this.loadWeekData(w)}}/>
         </Page>
-        <Page index={pageOrder[1]} w={width} h={height} title={"לוֹטוֹ מצרכים"} spread={spread} pageSelected={this.pageSelected}>
+        <Page index={1} displayOrder={pageOrder[1]} w={width} h={height} title={"לוֹטוֹ מצרכים"} spread={spread} pageSelected={this.pageSelected}>
           <Ingredients data={data}/>
         </Page>
-        <Page index={pageOrder[2]} w={width} h={height} title={"מתכּוֹנִפְלא"} spread={spread} pageSelected={this.pageSelected}>
+        <Page index={2} displayOrder={pageOrder[2]} w={width} h={height} title={"מתכּוֹנִפְלא"} spread={spread} pageSelected={this.pageSelected}>
           <Recipe data={data.recipe}/>  
         </Page>
-        <Page index={pageOrder[3]} w={width} h={height} title={"מהאלבום"} spread={spread} pageSelected={this.pageSelected}>
+        <Page index={3} displayOrder={pageOrder[3]} w={width} h={height} title={"מהאלבום"} spread={spread} pageSelected={this.pageSelected}>
           <FamilyPicture data={data}/>
         </Page>
-        <Page index={pageOrder[4]} w={width} h={height} title={"הפתעה"} spread={spread} pageSelected={this.pageSelected}>
+        <Page index={4} displayOrder={pageOrder[4]} w={width} h={height} title={"הפתעה"} spread={spread} pageSelected={this.pageSelected}>
           <Surprise data={data}/>
         </Page>
         <div style={{
           position: 'absolute',
-          bottom: 16,
-          left: 16,
-          width: 32,
-          height: 32,
-          backgroundColor: 'red',
-        }} onClick={_=>this.setState({spread: !spread})}/>
+          borderRadius: '100%',
+          bottom: 20,
+          left: 20,
+          width: 40,
+          height: 40,
+          backgroundColor: global.colors.main,
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }} onClick={_=>this.setState({spread: !spread})}>{ spread ? '✕' : '〓'}</div>
       </div>
     );
   }

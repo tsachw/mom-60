@@ -22,31 +22,17 @@ export default class Page extends Component {
     }
     
     render(){
-        const {index, w,h, title, spread, pageSelected} = this.props;
+        const {index, displayOrder, w,h, title, spread, pageSelected} = this.props;
 
         const pHeight = global.isLandscape ? h - 32 : h - 96; 
         const pWidth = global.isLandscape ? w - 128 : w - 72;
 
-        // let ticketStyle={
-        //     position: 'absolute',
-        //     fontSize: '4vw',
-        //     height: 24,
-        //     width: 60,
-        //     bottom: -24,
-        //     left: 24 + (4-index) * 60,
-        //     backgroundColor: global.colors.main,
-        //     color: 'white',
-        //     display: 'flex',
-        //     justifyContent: 'center',
-        //     alignItems: 'center'
-        // }
-
         let transformState = `rotate(${ -1 + 2*Math.random()}deg)`;
-        let origin = "50% 50%";
+        const origin = global.isLandscape ? "100% 50%" : "50% 50%";
+        const direction = global.isLandscape ? 1 : -1;
         if(spread){
-            transformState = `rotate(${ -5*(4-index)}deg)
-            translate(${20*(4-index)}px,0)`;
-            // origin = "0% 0%";
+            transformState = `rotate(${ direction*5*(4-displayOrder)}deg)
+            translate(${20*(4-displayOrder)}px,0)`;
         }
 
         return (
@@ -54,8 +40,8 @@ export default class Page extends Component {
                 position: 'absolute',
                 bottom: global.isLandscape ? 16 : '',
                 top: global.isLandscape ? '' : 16,
-                right: 16 + 8*index,
-                zIndex: 10-index,
+                right: 16 + 8*displayOrder,
+                zIndex: 10-displayOrder,
                 width: pWidth,
                 height: pHeight,
                 backgroundColor: 'white',
@@ -69,16 +55,27 @@ export default class Page extends Component {
             }}>
                 {/* {index !== 0 && <div style={ticketStyle}>{title}</div> } */}
                 {this.props.children}
+                {/* <div style={{
+                    position: 'absolute',
+                    top:0,
+                    right:0,
+                    backgroundColor: 'white',
+                    width:'100%',
+                    height: '100%',
+                    opacity: spread ? 0.9 : 0,
+                    transition: 'opacity 0.4s ease-out', 
+                }}/> */}
                 <div style={{
+                    zIndex: 999,
                     position: 'absolute',
                     padding: '8px 14px 10px 14px',
-                    borderRadius: '8px 0 0 0',
+                    borderRadius: global.isLandscape ? '0 8px 0 0' : '8px 0 0 0',
                     bottom: 0,
                     left: 0,
                     backgroundColor: global.colors.main,
                     opacity: spread ? 1 : 0,
-                    transformOrigin: "0% 100%",
-                    transform: 'rotate(90deg) translate(-100%, 0%)',
+                    transformOrigin: global.isLandscape ? "" : "0% 100%",
+                    transform: global.isLandscape ? "" : 'rotate(90deg) translate(-100%, 0%)',
                     userSelect: 'none',
                     cursor: 'pointer',
                     pointerEvents: spread ? '' : 'none',
@@ -86,6 +83,7 @@ export default class Page extends Component {
                 }} onClick={_=>pageSelected(index)}>
                     {title}
                 </div>
+                
             </div>
         )
     }
