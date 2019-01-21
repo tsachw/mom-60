@@ -127,7 +127,7 @@
   "runtime~main.js": "/mom-60/static/js/runtime~main.7534cf93.js",
   "runtime~main.js.map": "/mom-60/static/js/runtime~main.7534cf93.js.map",
   "static/media/hearts.svg": "/mom-60/static/media/hearts.ff8bba8e.svg",
-  "static/media/index.css": "/mom-60/static/media/VC_david-Cursive.47ffaf79.woff",
+  "static/media/index.css": "/mom-60/static/media/VC_Narkis-Bold.935f247e.woff",
   "static/media/red-bg.png": "/mom-60/static/media/red-bg.598f79ac.png",
   "static/media/16866_l.jpg": "/mom-60/static/media/16866_l.1b4c1962.jpg",
   "static/media/cyclamen.png": "/mom-60/static/media/cyclamen.22888019.png",
@@ -144,6 +144,6 @@
   "static/media/yuryut754.jpg": "/mom-60/static/media/yuryut754.3d1d8207.jpg",
   "static/css/main.4856e21c.chunk.css.map": "/mom-60/static/css/main.4856e21c.chunk.css.map",
   "index.html": "/mom-60/index.html",
-  "precache-manifest.f67b460316dd9604a7d42681d7d17463.js": "/mom-60/precache-manifest.f67b460316dd9604a7d42681d7d17463.js",
+  "precache-manifest.3b0c4ed4752d930c37e3ee0946401eb0.js": "/mom-60/precache-manifest.3b0c4ed4752d930c37e3ee0946401eb0.js",
   "service-worker.js": "/mom-60/service-worker.js"
 }
