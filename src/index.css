@@ -94,6 +94,7 @@ select {
   border-radius: 0;
   border-color: var(--main-color);
   padding-bottom: 1.5vw;
+  cursor: pointer;
 }
 
 select:focus {

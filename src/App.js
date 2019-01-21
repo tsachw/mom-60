@@ -115,7 +115,8 @@ class App extends Component {
           color: 'white',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          cursor: 'pointer',
         }} onClick={_=>this.setState({spread: !spread})}>{ spread ? '✕' : '〓'}</div>
       </div>
     );

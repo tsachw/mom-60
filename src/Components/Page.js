@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
-import {TweenMax, Draggable, Elastic} from "gsap/all";
-
 
 export default class Page extends Component {
-    constructor(props){
-        super(props);
 
-        this.page = React.createRef();
-    }
-
-    componentDidMount(){
-        // Draggable.create(this.page.current, {
-        //     type: 'x,y',
-        //     bounds: this.props.bounds.current,
-        //     edgeResistance:0.98,
-        //     onDragEnd:()=>{
-        //         TweenMax.to(this.page.current, 1, {ease: Elastic.easeOut, transform: 'translate(0,0)'});
-        //         global.turnPage();
-        //     },
-        // });
-    }
-    
     render(){
         const {index, displayOrder, w,h, title, spread, pageSelected} = this.props;
 
         const pHeight = global.isLandscape ? h - 32 : h - 96; 
         const pWidth = global.isLandscape ? w - 128 : w - 72;
 
-        let transformState = `rotate(${ -1 + 2*Math.random()}deg)`;
+        const deg = global.isLandscape ? 1 : 2;
+
+        let transformState = `rotate(${ -0.5*deg + deg*Math.random()}deg)`;
         const origin = global.isLandscape ? "100% 50%" : "50% 50%";
         const direction = global.isLandscape ? 1 : -1;
         if(spread){
@@ -36,7 +19,7 @@ export default class Page extends Component {
         }
 
         return (
-            <div ref={this.page} id="page_container" style={{
+            <div id="page_container" style={{
                 position: 'absolute',
                 bottom: global.isLandscape ? 16 : '',
                 top: global.isLandscape ? '' : 16,
