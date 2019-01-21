@@ -264,12 +264,12 @@ self.__precacheManifest = [
     "url": "/mom-60/static/media/VC_Narkis-Bold.935f247e.woff"
   },
   {
-    "revision": "e27d4b80c8ad5191e3f19314301898ae",
-    "url": "/mom-60/static/media/VC_NarkisBlock-Regular.e27d4b80.woff"
-  },
-  {
     "revision": "47ffaf7956e1e530ff419aea52cf22cf",
     "url": "/mom-60/static/media/VC_david-Cursive.47ffaf79.woff"
+  },
+  {
+    "revision": "e27d4b80c8ad5191e3f19314301898ae",
+    "url": "/mom-60/static/media/VC_NarkisBlock-Regular.e27d4b80.woff"
   },
   {
     "revision": "e6e127a6febe5a90e58716c9282bf812",
