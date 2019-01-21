@@ -244,8 +244,8 @@ self.__precacheManifest = [
     "url": "/mom-60/static/media/yuryut754.3d1d8207.jpg"
   },
   {
-    "revision": "f1bb38c157ec345c0948",
-    "url": "/mom-60/static/js/main.f1bb38c1.chunk.js"
+    "revision": "187a0780d07069d7ba8b",
+    "url": "/mom-60/static/js/main.187a0780.chunk.js"
   },
   {
     "revision": "579975a7aaee19b615e5",
@@ -260,16 +260,16 @@ self.__precacheManifest = [
     "url": "/mom-60/static/media/hearts.ff8bba8e.svg"
   },
   {
-    "revision": "935f247e1dfd4af5d9eacfbc42c3b711",
-    "url": "/mom-60/static/media/VC_Narkis-Bold.935f247e.woff"
-  },
-  {
     "revision": "47ffaf7956e1e530ff419aea52cf22cf",
     "url": "/mom-60/static/media/VC_david-Cursive.47ffaf79.woff"
   },
   {
     "revision": "e27d4b80c8ad5191e3f19314301898ae",
     "url": "/mom-60/static/media/VC_NarkisBlock-Regular.e27d4b80.woff"
+  },
+  {
+    "revision": "935f247e1dfd4af5d9eacfbc42c3b711",
+    "url": "/mom-60/static/media/VC_Narkis-Bold.935f247e.woff"
   },
   {
     "revision": "e6e127a6febe5a90e58716c9282bf812",
@@ -328,11 +328,11 @@ self.__precacheManifest = [
     "url": "/mom-60/static/media/uyfuf755oiuu.68ae88b2.jpg"
   },
   {
-    "revision": "f1bb38c157ec345c0948",
-    "url": "/mom-60/static/css/main.4856e21c.chunk.css"
+    "revision": "187a0780d07069d7ba8b",
+    "url": "/mom-60/static/css/main.0e5b6bc0.chunk.css"
   },
   {
-    "revision": "d11e1e2c3252c310b4851a1526f20caf",
+    "revision": "07e3953f75a1612acf228b42a7c5b2cb",
     "url": "/mom-60/index.html"
   }
 ];
