@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    // GenerateDates();
+    GenerateDates();
     this.findWeeks(); 
 
     window.addEventListener("resize", this.updateDimensions);
@@ -131,8 +131,8 @@ function GenerateDates(){
     
     for(let i=0; i<60; i++){
       const pre = ('0' + (i+1)).slice(-2);
-      let d = new Date("15 Jan 2019");
-      d.setDate(d.getDate() + i*1);
+      let d = new Date("01 Jan 2018");
+      d.setDate(d.getDate() + i*7);
       dates += `{"d":"${d}","w":"week_${pre}"},\n`
     }
 

@@ -8,11 +8,11 @@ export const data ={
     },
     "family_image": "",
     "family_image_title": "",
-    "surpriseType": "",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "loof.jpg",
+        "plant_name": "לוף ארץ ישראלי"
     },
     "poem": {
         "poem_title": "",
