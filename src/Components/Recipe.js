@@ -54,6 +54,12 @@ export default class Recipe extends Component {
 class Ingredient extends Component {
     state={ check: false }
 
+    componentWillReceiveProps (newProps){
+        if(newProps.txt !== this.props.txt){
+            this.setState({check:false});
+        }
+    }
+
     render(){
         const{txt} = this.props;
         return <div style={{
