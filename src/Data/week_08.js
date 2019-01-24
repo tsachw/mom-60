@@ -8,8 +8,8 @@ export const data ={
     },
     "family_image": "",
     "family_image_title": "",
-    "surpriseType": "",
-    "task": "",
+    "surpriseType": "task",
+    "task": "ביום שבת כאשר את נמצאת בקרבת אבא- כל שעה נשיקה, כל שעתיים חיבוק.",
     "plant": {
         "plant_image": "",
         "plant_name": ""

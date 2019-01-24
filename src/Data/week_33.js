@@ -6,8 +6,8 @@ export const data ={
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
+    "family_image": "4.jpg",
+    "family_image_title": "עם הסבתות אחרי הברית",
     "surpriseType": "",
     "task": "",
     "plant": {

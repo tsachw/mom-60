@@ -67,6 +67,6 @@ class Ingredient extends Component {
             padding: '0.6em 1.2em 0.8em 1.2em',
             textDecoration: this.state.check ? 'line-through' : 'none',
             color: this.state.check ? 'silver' : 'black',
-        }} onClick={()=>{this.setState({check:true})}}>{txt}</div>
+        }} onClick={()=>{this.setState({check:!this.state.check})}}>{txt}</div>
     }
 }
