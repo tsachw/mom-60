@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_17",
-    "ingredients":["","","",""],
+    "ingredients":["פרפר הודו", "אפונה צהובה", "רוקט", "חמאת בוטנים"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "52.jpg",
+    "family_image_title": "ללא מילים",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "ziporney_hatul.jpg",
+        "plant_name": "ציפורן החתול"
     },
     "poem": {
         "poem_title": "",

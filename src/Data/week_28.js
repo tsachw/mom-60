@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_28",
-    "ingredients":["","","",""],
+    "ingredients":["כורכום","גרעיני דלעת", "לימון כבוש", "ביצים"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "89.jpg",
+    "family_image_title": "ללא כותרת",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "leshon_par.jpg",
+        "plant_name": "לשון פר סמורה"
     },
     "poem": {
         "poem_title": "",

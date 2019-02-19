@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_25",
-    "ingredients":["","","",""],
+    "ingredients":["אבטיח", "למון גראס", "עדשים ירוקות", "פרושוטו"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "81.jpg",
+    "family_image_title": "יוני 98, צח מכין תיק עבודות לבצלאל",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "achinopsis.jpg",
+        "plant_name": "אכינופסיס, שכונה ד' קיץ 82"
     },
     "poem": {
         "poem_title": "",

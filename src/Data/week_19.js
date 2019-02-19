@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_19",
-    "ingredients":["","","",""],
+    "ingredients":["זעפרן", "גבינה צפתית", "כרובית", "גרעיני חמניה"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "49.jpg",
+    "family_image_title": "אמא ואמא בפרג",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "gdilan.jpg",
+        "plant_name": "גדילן מצוי"
     },
     "poem": {
         "poem_title": "",

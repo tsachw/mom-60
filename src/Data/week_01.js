@@ -25,7 +25,7 @@ export const data ={
     "family_image": "80.jpg",
     "family_image_title": "דצמבר 1999",
     "surpriseType": "task",
-    "task": "למדי לנגן שיר חדש בחלילית.",
+    "task": "ללמוד לנגן שיר חדש בחלילית.",
     "plant": {
         "plant_image": "cyclamen.png",
         "plant_name": "שם הצמח"
