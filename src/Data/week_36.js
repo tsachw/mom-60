@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_36",
-    "ingredients":["","","",""],
+    "ingredients":["רכז רימונים", "שמרים", "שומן כבש", "לפת"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "16.jpg",
+    "family_image_title": "נעורים",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "zalaf_mizri.jpg",
+        "plant_name": "צלף מצרי"
     },
     "poem": {
         "poem_title": "",

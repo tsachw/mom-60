@@ -1,22 +1,32 @@
 export const data ={
     "key": "week_59",
-    "ingredients":["","","",""],
+    "ingredients":["תרד", "דפי לזניה", "אבקת שום", "צלפים"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "IMG_0519.jpg",
+    "family_image_title": "ללא כותרת",
+    "surpriseType": "poem",
     "task": "",
     "plant": {
         "plant_image": "",
         "plant_name": ""
     },
     "poem": {
-        "poem_title": "",
-        "written_by": "",
-        "poem_body": ``
+        "poem_title": "הַשּׁוּם Luz Machado",
+        "written_by": "לוּס מָצָ'דוֹ",
+        "poem_body": `הַשּׁוּם קוֹפֵץ אֶת אֶגְרוֹפוֹ,
+        אֶגְרוֹפוֹ הַלָּבָן הָרֵיחָנִי עָטוּי שַׁפִּירִיּוֹת
+        שֶׁלֹּא נוֹלְדוּ.
+        אֲבָל כְּשֶׁהוּא מַגִּיעַ לְבֵיתִי
+        וַאֲנִי מַפְשִׁיטָה אֶת סַהֲרוֹנֵי נִיחוֹחוֹ
+        וּמְנַפֶּצֶת אֶת הַשּׁוֹבָךְ הַזָּעִיר שֶׁל טֵרוּפוֹ,
+        הַשּׁוּם זוֹעֵק בַּעֲבוּר כָּל הַזְּמַן שֶׁהֻסְתַּר.
+         
+        הוּא זוֹכֶה אָז לָדַעַת
+        מַה קְּצָרָה הַחֵרוּת עַל פְּנֵי הָאֲדָמָה.
+        `
     }
 }

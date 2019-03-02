@@ -1,15 +1,15 @@
 export const data ={
     "key": "week_44",
-    "ingredients":["","","",""],
+    "ingredients":["קוסקוס", "שמן קוקוס", "סומאק", "דלעת"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
-    "task": "",
+    "family_image": "38.jpg",
+    "family_image_title": "בחתונה",
+    "surpriseType": "task",
+    "task": "לספר לנו סוד.",
     "plant": {
         "plant_image": "",
         "plant_name": ""

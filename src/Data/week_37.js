@@ -1,15 +1,15 @@
 export const data ={
     "key": "week_37",
-    "ingredients":["","","",""],
+    "ingredients":["רימון", "דג טחון", "קשיו", "אטריות ביצים"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
-    "task": "",
+    "family_image": "72.jpg",
+    "family_image_title": "ילדים עם סטייל בצרפת",
+    "surpriseType": "task",
+    "task": "ליצור כלי חימר בהשראת פרי או ירק מהעונה",
     "plant": {
         "plant_image": "",
         "plant_name": ""

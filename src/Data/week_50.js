@@ -1,15 +1,15 @@
 export const data ={
     "key": "week_50",
-    "ingredients":["","","",""],
+    "ingredients":["פטריות שיטאקי", "בשר הודו טחון", "סלק", "קמח חומוס"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
-    "task": "",
+    "family_image": "47.jpg",
+    "family_image_title": "אבא טוב בקומפוזיציה",
+    "surpriseType": "task",
+    "task": "ליצור קשר עם אדם שלא דיברת איתו תקופה ארוכה.",
     "plant": {
         "plant_image": "",
         "plant_name": ""

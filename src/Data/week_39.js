@@ -1,15 +1,15 @@
 export const data ={
     "key": "week_39",
-    "ingredients":["","","",""],
+    "ingredients":["לבבות דקל", "כמון", "זרעי פשתן", "שמנת מתוקה"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
-    "task": "",
+    "family_image": "22.jpg",
+    "family_image_title": "צח ברחובות עם סבתא, סבא ודונלד דאק",
+    "surpriseType": "task",
+    "task": "להנביט בטטה",
     "plant": {
         "plant_image": "",
         "plant_name": ""

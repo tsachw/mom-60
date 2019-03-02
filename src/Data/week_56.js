@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_56",
-    "ingredients":["","","",""],
+    "ingredients":["קייל", "אורז עגול", "וניל", "מסקרפונה"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "13.jpg",
+    "family_image_title": "בדיונות",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "sitvanit.jpg",
+        "plant_name": "סתוונית היורה"
     },
     "poem": {
         "poem_title": "",

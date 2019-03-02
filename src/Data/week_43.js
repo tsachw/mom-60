@@ -1,18 +1,18 @@
 export const data ={
     "key": "week_43",
-    "ingredients":["","","",""],
+    "ingredients":["פומלה", "גריסי פנינה", "ברבוניות", "סילאן"],
     "recipe": {
         "recipe_title": "",
         "recipe_ingredients": ["","",""],
         "instructions": ``
     },
-    "family_image": "",
-    "family_image_title": "",
-    "surpriseType": "",
+    "family_image": "28.jpg",
+    "family_image_title": "כובשים את הגולן",
+    "surpriseType": "plant",
     "task": "",
     "plant": {
-        "plant_image": "",
-        "plant_name": ""
+        "plant_image": "ziporen_nakod.jpg",
+        "plant_name": "ציפורן נקוד"
     },
     "poem": {
         "poem_title": "",
