@@ -24,7 +24,7 @@ export const data ={
         מפזרים מעל נענע מיובשת ועלי ורדים ומגישים.
         `
     },
-    "family_image": "82",
+    "family_image": "82.jpg",
     "family_image_title": "מרץ 96, בר באה הביתה",
     "surpriseType": "plant",
     "task": "",
